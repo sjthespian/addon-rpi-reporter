@@ -1,0 +1,5 @@
+{
+  "name": "RPi Reporter MQTT2HA Daemon Home Assistant Add-On",
+  "url": "https://github.com/sjthespian/addon-rpi-reporter",
+  "maintainer": "Daniel Rich <drich@employees.org>"
+}

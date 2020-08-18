@@ -1,0 +1,37 @@
+{
+  "apparmor": false,
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "boot": "auto",
+  "description": "RPi MQTT metrics reporter",
+  "full_access": true,
+  "homeassistant_api": true,
+  "name": "RPi Reporter MQTT2HA Daemon",
+  "options": {
+    "mqttuser": "",
+    "mqttpass": "",
+    "mqtthost": "127.0.0.1",
+    "mqttport": "1883",
+    "loglevel": "DEBUG"
+  },
+  "panel_icon": "mdi:pi-box",
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
+  ],
+  "schema": {
+    "mqttuser": "str",
+    "mqttpass": "password",
+    "mqtthost": "str",
+    "mqttport": "port",
+    "loglevel": "list(INFO|WARN|ERROR|DEBUG)"
+  },
+  "services": ["mqtt:want"],
+  "slug": "rpireporter",
+  "stage": "experimental",
+  "startup": "services",
+  "url": "https://github.com/sjthespian/addon-rpi-reporter",
+  "version": "0.1"
+}
